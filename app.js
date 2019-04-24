@@ -41,6 +41,7 @@ app.get('/events/:orgId', (req, res, next) => {
         });
 
         subs = { ...subs, [req.params.orgId] : sub };
+        console.log(subs);
     }
     res.sendFile(path.join(__dirname, '/public/events.html'));
 });
@@ -53,6 +54,8 @@ app.post('/sessionId', bodyParser.json(), (req, res, next) => {
     });
 
     conns = { ...conns, [req.body.orgId] : conn };
+    console.log(conns);
+
     res.status(302).location(`/events/${req.body.orgId}`).end();
 });
 

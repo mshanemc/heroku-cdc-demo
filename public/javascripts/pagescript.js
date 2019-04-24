@@ -1,7 +1,3 @@
-const channel = '/data/ChangeEvents';
-const replayId = -1;
-let subscription;
-
 jsforce.browser.init({
     clientId: '3MVG9CEn_O3jvv0zQGZ3RC8AeiMSjxon81whEHIKuwS6_CFiVtuINv6ojt1Ma0nS._BjkRmrN0RFL2ujuuPoU',
     redirectUri: 'https://heroku-cdc-demo.herokuapp.com',
