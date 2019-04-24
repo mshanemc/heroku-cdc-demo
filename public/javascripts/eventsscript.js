@@ -30,3 +30,7 @@ ws.onmessage = function (event) {
     console.log(newData);
     app.messages.push(newData);
 };
+
+const logout = () => {    
+    jsforce.browser.logout();
+}
