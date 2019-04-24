@@ -9,7 +9,7 @@ const app = express();
 
 const port = process.env.PORT || 8443;
 const server = app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
+    console.log(`Our app is running on port ${port}`);
 });
 
 const wss = new WebSocket.Server({ server, clientTracking: true });
