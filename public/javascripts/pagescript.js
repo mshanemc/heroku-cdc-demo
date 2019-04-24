@@ -3,10 +3,10 @@ const replayId = -1;
 let subscription;
 
 jsforce.browser.init({
-    clientId: process.env.clientId,
-    redirectUri: process.env.redirectUri,
-    loginUrl : process.env.loginUrl,
-    version: process.env.apiVersion,
+    clientId: '3MVG9CEn_O3jvv0zQGZ3RC8AeiMSjxon81whEHIKuwS6_CFiVtuINv6ojt1Ma0nS._BjkRmrN0RFL2ujuuPoU',
+    redirectUri: 'http://localhost:1717',
+    loginUrl : 'https://test.salesforce.com',
+    version: '46.0',
 });
   
 jsforce.browser.on('connect', function(conn) {
