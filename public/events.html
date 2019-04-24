@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <h1>CDC Demo App</h1>
+  <div id="app">
+    <ol>
+        <span v-if="messages.length === 0">
+            <li>No Messages</li>
+        </span>        
+        <span v-if="messages.length > 0">
+            <li v-for="message in messages">
+                {{ message }}
+            </li>            
+        </span>
+    </ol>
+  </div>
+</body>
+
+<script src="/javascripts/eventsscript.js"></script>
+
+</html>
