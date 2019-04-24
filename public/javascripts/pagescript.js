@@ -4,7 +4,7 @@ let subscription;
 
 jsforce.browser.init({
     clientId: '3MVG9CEn_O3jvv0zQGZ3RC8AeiMSjxon81whEHIKuwS6_CFiVtuINv6ojt1Ma0nS._BjkRmrN0RFL2ujuuPoU',
-    redirectUri: 'http://localhost:1717',
+    redirectUri: 'https://heroku-cdc-demo.herokuapp.com',
     loginUrl : 'https://test.salesforce.com',
     version: '46.0',
 });
