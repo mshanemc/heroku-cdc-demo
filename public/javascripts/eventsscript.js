@@ -38,4 +38,5 @@ ws.onmessage = function (event) {
 
 const logout = () => {    
   jsforce.browser.logout();
+  window.location.href = '/logout';
 }
