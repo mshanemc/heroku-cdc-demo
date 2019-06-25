@@ -16,7 +16,8 @@ jsforce.browser.on('connect', function(conn) {
         body: JSON.stringify({
             accessToken: conn.accessToken,
             instanceUrl: conn.instanceUrl,
-            orgId: conn.userInfo.organizationId
+            orgId: conn.userInfo.organizationId,
+            loginUrl: conn.loginUrl
         })
     })
     .then( response => {

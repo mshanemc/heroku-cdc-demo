@@ -50,13 +50,14 @@ app.get('/events/:orgId', (req, res, next) => {
         console.log('matched sub:');
         console.log(subs[req.params.orgId]);
     }
-    
+
     res.sendFile(path.join(__dirname, '/public/events.html'));
 });
 
 
 app.post('/sessionId', bodyParser.json(), (req, res, next) => {
     const conn = new jsforce.Connection({
+        loginUrl: req.body.loginUrl,
         instanceUrl: req.body.instanceUrl,
         accessToken: req.body.accessToken
     });
