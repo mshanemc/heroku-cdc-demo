@@ -27,7 +27,7 @@ app.get('/', function(req, res, next) {
     res.render('index', { title: 'CDC Demo' });
 });
   
-app.get('/', function(req, res, next) {
+app.get('/logout', function(req, res, next) {
     res.render('logout');
 });
 
