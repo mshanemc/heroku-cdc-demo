@@ -28,7 +28,7 @@ app.get('/', function(req, res, next) {
 });
   
 app.get('/logout', function(req, res, next) {
-    res.render('logout');
+    res.sendFile(path.join(__dirname, '/public/logout.html'));
 });
 
 app.get('/events/:orgId', (req, res, next) => {
