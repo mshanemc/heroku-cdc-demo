@@ -46,7 +46,11 @@ app.get('/events/:orgId', (req, res, next) => {
 
         subs = { ...subs, [req.params.orgId] : sub };
         console.log(subs);
+    } else {
+        console.log('matched sub:');
+        console.log(subs[req.params.orgId]);
     }
+    
     res.sendFile(path.join(__dirname, '/public/events.html'));
 });
 
