@@ -27,6 +27,10 @@ app.get('/', function(req, res, next) {
     res.render('index', { title: 'CDC Demo' });
 });
   
+app.get('/', function(req, res, next) {
+    res.render('logout');
+});
+
 app.get('/events/:orgId', (req, res, next) => {
 
     if (! subs[req.params.orgId]) {     // only subscribe if you haven't already got it
