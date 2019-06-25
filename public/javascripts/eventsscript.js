@@ -1,5 +1,4 @@
 console.log('hello, I am the events page');
-
 let pinger;
 
 const HOST = location.href.replace(/^http/, 'ws');
