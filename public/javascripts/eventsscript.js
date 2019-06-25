@@ -1,9 +1,5 @@
 console.log('hello, I am the events page');
 
-if (!jsforce.browser.isLoggedIn() ) {
-  window.location.href = '/logout';
-}
-
 let pinger;
 
 const HOST = location.href.replace(/^http/, 'ws');
