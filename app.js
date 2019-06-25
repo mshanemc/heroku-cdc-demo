@@ -33,24 +33,20 @@ app.get('/logout', function(req, res, next) {
 
 app.get('/events/:orgId', (req, res, next) => {
 
-    if (! subs[req.params.orgId]) {     // only subscribe if you haven't already got it
+    // don't try to use old subs?
 
-        const conn = conns[req.params.orgId];
-        const sub = conn.streaming.topic(channel).subscribe(message => {         // subscribe to its events
-            wss.clients.forEach( client => {
-                if (client.url.includes(req.params.orgId) && client.readyState === client.OPEN ){
-                    client.send(JSON.stringify(message));
-                }
-            })
-        });
+    const conn = conns[req.params.orgId];
+    const sub = conn.streaming.topic(channel).subscribe(message => {         // subscribe to its events
+        wss.clients.forEach( client => {
+            if (client.url.includes(req.params.orgId) && client.readyState === client.OPEN ){
+                client.send(JSON.stringify(message));
+            }
+        })
+    });
 
-        subs = { ...subs, [req.params.orgId] : sub };
-        console.log(subs);
-    } else {
-        console.log('matched sub:');
-        console.log(subs[req.params.orgId]);
-    }
-
+    subs = { ...subs, [req.params.orgId] : sub };
+    console.log(subs);
+    
     res.sendFile(path.join(__dirname, '/public/events.html'));
 });
 
