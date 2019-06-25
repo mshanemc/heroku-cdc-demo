@@ -20,7 +20,7 @@ jsforce.browser.on('connect', function(conn) {
     })
     .then( response => {
         console.log(response);
-        if (response.status === 302) {
+        if (response.status === 302 || response.status === 200 ) {
             window.location.href = response.url;
         }
     })
