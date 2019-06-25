@@ -6,6 +6,7 @@ jsforce.browser.init({
 });
   
 jsforce.browser.on('connect', function(conn) {
+    console.log(conn);
     // post information to /sessionId, then follow redirect link
     fetch( '/sessionId' , {
         method: 'POST',
